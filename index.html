@@ -5,18 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer></script>
   <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <h1>Contact Us</h1>
+    <div class="name">
+      <div class="first">
+        <label for="firtName">First Name *</label>
+        <input type="text" id="firtName" required>
+        <span class="error">This field is required</span>
+      </div>
+      <div class="last">
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" required>
+        <span class="error">This field is required</span>
+      </div>
+    </div>
 
-  Contact Us
+    <div class="email">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" required>
+      <span class="error">Please enter a valid email address</span>
+    </div>
+
+    <div class="query">
+      <label for="query">Query Type *</label>
+      <select id="query" required>
+        <option value="" disabled selected>Please select a query type</option>
+        <option value="general">General Enquiry</option>
+        <option value="support">Support Request</option>
+      </select>
+      <span class="error">Please select a query type</span>
+    </div>
+
+    <div class="message">
+      <label for="message">Message *</label>
+      <textarea id="message" rows="5" required> required</textarea>
+      <span class="error">This field is required</span>
+    </div>
+
+    <div clas="consent">
+      <input type="checkbox">
+    </div>
+  </main>
+  
 
   First Name
   This field is required
