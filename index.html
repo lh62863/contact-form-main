@@ -10,78 +10,48 @@
   <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
-  <main>
+  <form novalidate>
     <h1>Contact Us</h1>
     <div class="name">
       <div class="first">
         <label for="firtName">First Name *</label>
-        <input type="text" id="firtName" required>
-        <span class="error">This field is required</span>
+        <input type="text" id="firstName" required>
+        <span class="error firstname_error">This field is required</span>
       </div>
       <div class="last">
         <label for="lastName">Last Name *</label>
         <input type="text" id="lastName" required>
-        <span class="error">This field is required</span>
+        <span class="error lastname_error">This field is required</span>
       </div>
     </div>
 
     <div class="email">
       <label for="email">Email Address *</label>
       <input type="email" id="email" required>
-      <span class="error">Please enter a valid email address</span>
+      <span class="error email_error">Please enter a valid email address</span>
     </div>
 
     <div class="query">
-      <label for="query">Query Type *</label>
-      <select id="query" required>
-        <option value="" disabled selected>Please select a query type</option>
-        <option value="general">General Enquiry</option>
-        <option value="support">Support Request</option>
-      </select>
-      <span class="error">Please select a query type</span>
+      <span>Query Type *</span>
+      <div class="items">
+        <label for="general"><input type="radio" name="item" id="general" required>General Enquiry</label>
+        <label for="support"><input type="radio" name="item" id="support">Support Request</label>
+      </div>
+      <span class="error query_error">Please select a query type</span>
     </div>
 
     <div class="message">
       <label for="message">Message *</label>
-      <textarea id="message" rows="5" required> required</textarea>
-      <span class="error">This field is required</span>
+      <textarea id="message" rows="5" required></textarea>
+      <span class="error message_error">This field is required</span>
     </div>
 
-    <div clas="consent">
-      <input type="checkbox">
+    <div class="consent">
+      <label for="consent"><input type="checkbox" id="consent" required>  I consent to being contacted by the team *</label>
+      <span class="error consent_error">To submit this form, please consent to being contacted</span>
     </div>
-  </main>
-  
 
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <button>submit</button>
+  </form>
 </body>
 </html>
